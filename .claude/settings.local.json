@@ -1,0 +1,52 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(netstat:*)",
+      "Bash(npm show:*)",
+      "Bash(# Search for knowledge graph in the gkg skill\ncat /c/Users/Administrator/claudecode-soupspec/.claude/skills/gkg.md 2>/dev/null | head -50 || find /c/Users/Administrator/claudecode-soupspec/.claude/skills -name \"*gkg*\" 2>/dev/null)",
+      "Bash(xargs grep:*)",
+      "Bash(cat:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:gitlab-org.gitlab.io)",
+      "Bash(gkg:*)",
+      "WebFetch(domain:gitlab.com)",
+      "Bash(tar:*)",
+      "Bash(export:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(/c/Users/Administrator/.local/bin/gkg.exe:*)",
+      "Bash(curl:*)",
+      "Bash(winget install:*)",
+      "Bash(\"$GH\" auth:*)",
+      "Bash(GITHUB_TOKEN=\"$GH_TOKEN\" \"$GH\" auth:*)",
+      "Bash(GITHUB_TOKEN=\"$GH_TOKEN\" \"$GH\" repo:*)",
+      "WebSearch",
+      "WebFetch(domain:docs.claudekit.cc)",
+      "WebFetch(domain:docs.gitlab.com)",
+      "Bash(powershell:*)",
+      "Bash(rm:*)",
+      "Bash(npx:*)",
+      "Bash(echo \"Exit: $?\")",
+      "Bash(/tmp/mcp-test/node_modules/.bin/repomix:*)",
+      "Bash(echo Testing context7-mcp...:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7",
+    "sequential-thinking",
+    "playwright",
+    "puppeteer",
+    "chrome-devtools",
+    "magic",
+    "perplexity-ask",
+    "shadcn",
+    "repomix",
+    "knowledge-graph",
+    "supabase",
+    "vercel",
+    "morph-mcp",
+    "toonify"
+  ]
+}

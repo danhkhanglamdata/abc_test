@@ -1,0 +1,85 @@
+{
+    "mcpServers": {
+        "context7": {
+            "command": "context7-mcp",
+            "args": [],
+            "env": {},
+            "disabled": false,
+            "autoApprove": [
+                "get-library-docs",
+                "resolve-library-id"
+            ]
+        },
+        "sequential-thinking": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-sequential-thinking"
+            ],
+            "env": {},
+            "disabled": false,
+            "autoApprove": [
+                "sequentialthinking"
+            ]
+        },
+        "playwright": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@playwright/mcp@latest"
+            ],
+            "disabled": false
+        },
+        "puppeteer": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-puppeteer"
+            ],
+            "disabled": false,
+            "autoApprove": [
+                "puppeteer_navigate",
+                "puppeteer_screenshot",
+                "puppeteer_click",
+                "puppeteer_fill",
+                "puppeteer_evaluate"
+            ]
+        },
+        "chrome-devtools": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "chrome-devtools-mcp@latest"
+            ],
+            "disabled": false
+        },
+        "shadcn": {
+            "command": "shadcn",
+            "args": [
+                "mcp"
+            ],
+            "disabled": false
+        },
+        "repomix": {
+            "command": "repomix",
+            "args": [
+                "--mcp"
+            ],
+            "disabled": false
+        },
+        "knowledge-graph": {
+            "type": "sse",
+            "url": "http://127.0.0.1:27495/mcp/sse",
+            "approvedTools": [
+                "list_projects",
+                "search_codebase_definitions",
+                "index_project",
+                "get_references",
+                "read_definitions",
+                "get_definition",
+                "repo_map"
+            ],
+            "disabled": false
+        }
+    }
+}
