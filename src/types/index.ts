@@ -1,7 +1,46 @@
-// Energy levels for events and moments
+// Event Platform Types - for the new Event Platform feature
+export interface PlatformEvent {
+  id: string;
+  name: string;
+  description?: string;
+  startDate: string;
+  endDate: string;
+  location?: string;
+  banners: string[];
+  primaryColor: string;
+  requireInfo: boolean;
+  infoFields: PlatformInfoField[];
+  status: 'draft' | 'active' | 'ended';
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PlatformMedia {
+  id: string;
+  eventId: string;
+  type: 'image' | 'video';
+  url: string;
+  thumbnail: string;
+  uploaderName?: string;
+  uploadedAt: string;
+}
+
+export interface PlatformInfoField {
+  id: string;
+  label: string;
+  required: boolean;
+  type: 'text' | 'email' | 'phone';
+}
+
+export interface PlatformEventStats {
+  participants: number;
+  mediaCount: number;
+  views: number;
+}
+
+// Legacy types for EventBoard (for backwards compatibility)
 export type EnergyLevel = 'low' | 'medium' | 'high' | 'peak';
 
-// Event type representing a scheduled event
 export interface Event {
   id: string;
   title: string;
@@ -17,7 +56,6 @@ export interface Event {
   updatedAt: Date;
 }
 
-// Moment type for capturing special moments within events
 export interface Moment {
   id: string;
   eventId: string;
@@ -30,11 +68,10 @@ export interface Moment {
   mood?: string;
   photos?: string[];
   notes?: string;
-  likes: string[]; // userIds who liked
+  likes: string[];
   createdAt: Date;
 }
 
-// WheelItem type for the spinning wheel feature
 export interface WheelItem {
   id: string;
   label: string;
@@ -43,7 +80,6 @@ export interface WheelItem {
   icon?: string;
 }
 
-// Poll type for polling participants
 export interface Poll {
   id: string;
   eventId: string;
@@ -52,7 +88,7 @@ export interface Poll {
   isActive: boolean;
   createdAt: Date;
   endsAt?: Date;
-  votes: Record<string, string[]>; // userId -> optionIds
+  votes: Record<string, string[]>;
 }
 
 export interface PollOption {
@@ -61,7 +97,6 @@ export interface PollOption {
   voteCount: number;
 }
 
-// Question type for Q&A sessions
 export interface Question {
   id: string;
   eventId: string;
@@ -70,14 +105,13 @@ export interface Question {
   authorName: string;
   authorAvatar?: string;
   upvotes: number;
-  upvotedBy: string[]; // userIds who upvoted
+  upvotedBy: string[];
   isAnswered: boolean;
   answeredAt?: Date;
   answers: Answer[];
   createdAt: Date;
 }
 
-// Answer type for Q&A
 export interface Answer {
   id: string;
   questionId: string;
@@ -89,7 +123,6 @@ export interface Answer {
   createdAt: Date;
 }
 
-// FlowNode type for React Flow nodes
 export interface FlowNode {
   id: string;
   type: string;
@@ -98,7 +131,6 @@ export interface FlowNode {
   style?: React.CSSProperties;
 }
 
-// FlowEdge type for React Flow edges
 export interface FlowEdge {
   id: string;
   source: string;
@@ -109,7 +141,6 @@ export interface FlowEdge {
   label?: string;
 }
 
-// User type for application users
 export interface User {
   id: string;
   name: string;
