@@ -15,9 +15,9 @@ SoupSpec is a standalone, spec-driven framework for AI-assisted development. It 
 At the end of every response, include a short summary in Vietnamese using this format:
 
 ```
-┌─────────────────────────────────────────────────┐
-│ Tóm tắt: [Vietnamese summary here]              │
-└─────────────────────────────────────────────────┘
+
+Tóm tắt: [Vietnamese summary here]              
+
 ```
 
 **Scope:** Specification files only (agents, commands, skills, workflows, modes, MCP configs). No CLI tools or runtime implementations.

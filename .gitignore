@@ -1,1 +1,6 @@
 .worktrees/
+dist/
+node_modules/
+package-lock.json
+tsconfig.node.json
+.playwright-mcp/

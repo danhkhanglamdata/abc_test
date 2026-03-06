@@ -29,7 +29,11 @@
       "Bash(npx:*)",
       "Bash(echo \"Exit: $?\")",
       "Bash(/tmp/mcp-test/node_modules/.bin/repomix:*)",
-      "Bash(echo Testing context7-mcp...:*)"
+      "Bash(echo Testing context7-mcp...:*)",
+      "Bash(dir:*)",
+      "Bash(sed:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "Bash(taskkill:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
