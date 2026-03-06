@@ -33,7 +33,9 @@
       "Bash(dir:*)",
       "Bash(sed:*)",
       "mcp__plugin_playwright_playwright__browser_navigate",
-      "Bash(taskkill:*)"
+      "Bash(taskkill:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(ls:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

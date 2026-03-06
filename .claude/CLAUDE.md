@@ -18,6 +18,7 @@ At the end of every response, include a short summary in Vietnamese using this f
 
 Tóm tắt: [Vietnamese summary here]              
 
+
 ```
 
 **Scope:** Specification files only (agents, commands, skills, workflows, modes, MCP configs). No CLI tools or runtime implementations.

@@ -20,6 +20,7 @@ Code-focused execution mode that minimizes discussion and maximizes code output.
 - Minimal prose
 - Action-oriented updates
 - Progress indicators only
+
 - Skip explanations unless asked
 
 ### Problem Solving
